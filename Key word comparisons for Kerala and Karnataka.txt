@@ -1,0 +1,60 @@
+Key Word Comparisons between Kerala and Karnataka 
+
+Achieve, Capabilities & Central (for each word x41 for Karnataka and x22 for Kerala) :- 
+For Kerala ads, these three words are used only in the following ad in unison, which is repeated "We will 
+never achieve our developmental capabilities without our women in the workforce. We promise to 
+reserve 33% of central govt. jobs only for women. Vote for Congress." Similarly for the Karnataka ads these three words are 
+repeated again in unison for the exact same ad and same context. For both states the same ad was generated using these three words 
+to reinforce the fact that developmental capabilities and women in the workforce are paramount and it is what Congress promises if voted. 
+The higher number in Karnataka simply means more ads of the same type as in Kerala were generated using the same words. 
+
+Comprehensive (x67 for Karnataka and x47 for Kerala) :- 
+For Kerala, this word is used in two distinct ads, which are "We promise to ensure zero tolerance to violence 
+of all forms and prevent hate crimes, through a comprehensive law to end such violent acts. Vote for Congress," and
+"Under our comprehensive jobs plan, we will provide 24 lakh government &amp; public sector jobs. Vote for Congress." This is similarly 
+repeated and generated as the same set of ads for the state of Karnataka. In these ads the party uses comprehensive 
+to emphasize its committment towards curbing crime and ensuring public sector job security. The higher number in Karnataka simply means 
+more ads of the same type as in Kerala were generated using the same words. 
+
+Congress (x121 for Kerala and x125 for Karnataka) :- 
+Used in most ads generated in both states within the "...Vote for Congress" context. 
+
+Crimes (x23 for Kerala and Karnataka) :- 
+Used in the same ad in both states in the context of ending "hate crimes." Which is in the same ad as the word "comprehensive." 
+
+Developmental (x41 for Karntaka and x22 for Kerala) :- 
+For both states this word is used in the same context as "Achieve, Capabilities and Central." 
+
+Modi (x62 for Kerala and x0 for Karnataka) :- 
+What is interesting with this comparison is that with the Kerala ads there are more targeted ads against Modi with regards to higher petrol rates, Modi made India 
+unsafe for women, highest unemployment in 45 years, children dying in government hospitals due to lack of oxygen, and dilution of environmental laws to benefit corporates. 
+
+Education (x28 for Kerala and x0 for Karnataka) :- 
+There are two distinct ads that are run in Kerala by congress targeted at education, perhaps due to their emphasis on it, which are "40% drop in education budget since 2014" and 
+"We will raise the national education budget to 6% of GDP, so that every child acquires complete &amp; free quality education up to class 12." 
+
+Government (x44 for Karnataka and x26 for Kerala) :- 
+In Karnataka there is only one ad in which this word is repeated which is, "Under our comprehensive jobs plan, we will provide 24 lakh government &amp; public sector jobs. Vote for Congress". 
+While for Kerala it appears in two ads, the same one as Karnataka and "We promise to free MSMEs from the clutches of inspector raj by exempting them from all government persmissions 
+for the first three years." In the first ad which is more used in Karnataka is targeted towards job growth, while in the other ad used in Kerala the word is used to incentivize msme owners as well.
+
+Jobs (x130 for Karnataka and x79 for Kerala) : -
+For Karnataka the word is used in the context of reserving 33% of Central gov jobs or in terms of providing 24/34 lakh jobs. For Kerala the word is used in the same set of ads in the same context. 
+This just means that many more of job-related ads were used in Karnataka. 
+
+Women (x83 for Karnataka and x54 for Kerala) :- 
+For this word it is used more in the same context for Karnataka but in a varied context for Kerala, even though the number of ads using "women" is more in Karnataka. For Karnataka only one ad uses 
+this word which is with respect to reserving 33% of central gov jobs for women. While for Kerala it includes this ad and the following ads "Women’s reservation bill. Congress will deliver!" and
+"Modi turned India into the most unsafe country for women!". 
+
+
+ 
+
+
+
+
+
+
+
+
+

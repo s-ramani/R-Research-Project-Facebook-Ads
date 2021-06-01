@@ -1,0 +1,50 @@
+---
+title: "Kerala Congress Ad Texts"
+author: "Suhaas Ramani"
+date: "10/27/2020"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r}
+library(tesseract)
+if(is.na(match("hin", tesseract_info()$available))) tesseract_download("hin")
+hin <- tesseract("hin")
+eng <- tesseract("eng")
+
+#Sample set of ads with Hindi text
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/168565304095241.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/243650359807244.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/250661195779041.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/274408200106679.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/275754296646100.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/277223726498810.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/282135935834941.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/283644765908600.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/284471749166874.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/308203143189449.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/315507612455689.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/316595619009593.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/316942372322661.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/317379038942236.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/326994164631380.jpg", engine = hin)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/332488430953531.jpg", engine = hin)
+
+#Sample ads with english text 
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/248245869443408.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/252837355594021.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/259586904965872.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/263307341255301.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/291975194812961.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/300621067316452.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/303723603829773.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/308393213154426.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/308557383146512.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/316391559016515.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/317264939138170.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/319174032278450.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/320897145439050.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/327450167915330.jpg", engine = eng)
+tesseract::ocr("C:/Users/Suhaas Ramani/Desktop/Kerala Text Ads/333318100860253.jpg", engine = eng)
+```

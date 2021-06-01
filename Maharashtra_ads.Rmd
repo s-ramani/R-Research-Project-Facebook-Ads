@@ -1,0 +1,126 @@
+---
+title: "Maharashtra Ads"
+author: "Suhaas Ramani"
+date: "11/27/2020"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(quanteda)
+library(ggplot2)
+library(readtext)
+library(dslabs)
+library(widyr)
+library(ggraph)
+library(tidytext)
+
+x <- corpus(readtext("C:/Users/Suhaas Ramani/Desktop/R Research Project - Facebook Ads/Maharashtra_txt.txt"))
+
+x <- tokens(x, remove_numbers = TRUE, remove_punct = TRUE, 
+            remove_symbols = TRUE, remove_separators = TRUE, 
+            split_hyphens = TRUE, remove_url = TRUE)
+
+x <- tokens_select(x, names(data_int_syllables))
+x <- tokens_select(x, c("amp", "s"), selection = "remove")
+
+dfmx <- dfm(x)
+
+dfmx <- dfmx %>% dfm(remove = stopwords('english')) %>% dfm_trim(min_termfreq = 20)
+
+words_dfm <- textstat_frequency(dfmx)
+features_words_dfm <- words_dfm$feature
+
+
+ds_theme_set()
+MH_freq_plot <- ggplot(words_dfm, aes(x = feature, y = frequency)) + 
+  geom_point() + 
+  xlab("words") +
+  geom_text(aes(label=paste(frequency)), size = 2.5, nudge_y = 4) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = -0.00001)) + 
+  ggtitle("Frequency Plot for Congress Ads in Maharashtra")
+MH_freq_plot
+
+y <- corpus(readtext("C:/Users/Suhaas Ramani/Desktop/R Research Project - Facebook Ads/Maharashtra_txt.txt"))
+
+y_dat <- data.frame(text = sapply(y, as.character), stringsAsFactors = FALSE)
+
+y_bigram <- y_dat %>% 
+  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+
+
+y_bigram_sep <- y_bigram %>% 
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+y_bigrams_filtered <- y_bigram_sep %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word)
+
+y_bigram_counts <- y_bigrams_filtered %>% 
+  count(word1, word2, sort = TRUE)
+
+
+y_test <- y_bigram_counts[1:36, ]
+
+y_test <- y_test[-c(1, 3, 10, 14, 15, 16, 17, 20, 22, 24, 31, 32, 33), ]
+
+library(igraph)
+
+y_test_graph <- y_test %>% 
+  graph_from_data_frame()
+
+library(ggraph)
+
+set.seed(2017)
+
+ggraph(y_test_graph, layout = "fr") +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+
+set.seed(2020)
+
+a <- grid::arrow(type = "closed", length = unit(.10, "inches"))
+
+ggraph(y_test_graph, layout = "fr") +
+  geom_edge_link(aes(edge_alpha = n), show.legend = FALSE,
+                 arrow = a, end_cap = circle(.05, 'inches')) +
+  geom_node_point(color = "lightblue", size = 4) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  theme_void()
+
+AFINN <- get_sentiments("afinn")
+
+word1_sentiments <- y_test %>%
+  inner_join(AFINN, by = c(word1 = "word")) %>% 
+  count(word1, value, sort = TRUE)
+word1_sentiments
+sum(word1_sentiments$value*word1_sentiments$n)
+
+word2_sentiments <- y_test %>% 
+  inner_join(AFINN, by = c(word2 = "word")) %>% 
+  count(word2, value, sort = TRUE)
+word2_sentiments
+sum(word2_sentiments$value*word2_sentiments$n)
+
+
+y_test_cor <- y_test %>% 
+  pairwise_cor(word1, word2, sort = TRUE) 
+y_test_cor
+  
+y_test_cor %>%
+  filter(item1 %in% c("comprehensive", "jobs", "public", "govt")) %>% 
+  group_by(item1) %>% 
+  top_n(10) %>% 
+  ungroup() %>%
+  mutate(item2 = reorder(item2, correlation)) %>%
+  ggplot(aes(item2, correlation)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip()
+
+# I only chose the top 4 words as per its use. I can add more and make separate plots if needed. 
+  
+```
+

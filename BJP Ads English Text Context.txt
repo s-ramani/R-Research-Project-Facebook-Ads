@@ -1,0 +1,26 @@
+an (11) - the word 'an' does not exist in any of the 6 distinct english text ads. Could have been included erroneously through tesseract. 
+
+for (40) - throughout all 6 ads the words "He Works For Them" are reused, where 'for' is the stem. 
+
+he (39) - Similar to the word 'for', 'he' is used only in the same context.
+
+him (12) - the word 'him' is used through all the ads, (it should ideally appear 39-40 times), it is used only in the sentence "Stand with him ..." 
+which can be followed by anything from "empower our daughters" or "to support our farmers". It's basically a standard template the BJP has used. 
+
+i (37) - the singular word 'I' does not exist in any of the ads. 
+
+in (10) - the word 'in' should appear ideally 39-40 times as it is in every single ad. The word 'in' 
+is used in the following sentence which exists in each ad, "Donate now to support Namo again in 2019". 
+
+stand (12) - the word 'stand' should appear ideally 39-40 times, it is used in the same context as 'him' in the sentence "Stand with him..."
+
+them (41) - similar to the words 'for' and 'he', the word 'them' is used in the same context.
+
+to (22) - the word 'to' is used in both contexts, which are "Stand with him to ... " and "Donate now to support Namo again in 2019". It should show up more 
+than 40 times as it is used twice in each ad. 
+
+we (11) - the word 'we' does not exist in any of the ads. 
+
+with (12) - the word 'with' is used in the same context as 'stand' and 'him', in "Stand with him...". 
+
+works (39) - similar to the words 'for', 'he' and 'them', 'works' is used in the same context.
